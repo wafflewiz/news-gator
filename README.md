@@ -9,6 +9,8 @@ Additional Setup:
 Tailwind CSS: Tailwind CSS is pre-configured in this project. To customize your Tailwind setup, edit the tailwind.config.js file as needed.
 Shadcn UI:You can use Shadcn UI components directly in your project. For customization and further documentation, check out the Shadcn UI doc: https://ui.shadcn.com/docs
 
+To start development server run: npm run dev
+
 
 
 
