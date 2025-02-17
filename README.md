@@ -12,7 +12,7 @@ Shadcn UI:You can use Shadcn UI components directly in your project. For customi
 To start development server run: npm run dev
 The above command should run on localhost and your changes will update in real-time!
 
-Ask Rami if you have any issues!
+Ask in the Teams Chat if you have any issues!
 
 
 
