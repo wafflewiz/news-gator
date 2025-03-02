@@ -1,5 +1,9 @@
 # React + TypeScript + Vite + Shadcn + Tailwind CSS
 
+***You may need to install Node/Npm on your machine if you don't already have them install. check your version snd make sure it matches packages.json***
+
+
+
 1. Make sure you clone the repository to your local machine
 2. Run VS Code AS ADMINISTRATOR and open  the root folder (news-gator)
 3. You can now use the terminal in VS Code to install the necessary dependancies by running the command: pnpm install
