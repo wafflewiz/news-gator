@@ -1,6 +1,6 @@
 # React + TypeScript + Vite + Shadcn + Tailwind CSS
 
-***You may need to install Node/Npm on your machine if you don't already have them install. check your version snd make sure it matches packages.json***
+***You may need to install Node/Npm on your machine if you don't already have them installed. Check your version and make sure it matches packages.json***
 
 
 
