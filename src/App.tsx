@@ -13,7 +13,7 @@ import {
 //I added this card component from https://ui.shadcn.com/docs/components/
 //Just an example, we could have multiple cards holding articles 
 
-function App() {
+/*function App() {
   const [count, setCount] = useState(0)
 
   return (
@@ -48,6 +48,19 @@ function App() {
       </p>
     </>
   )
-}
+}*/
+
+//Using the NewsList in the App
+import React from 'react';
+import NewsList from './components/ui/NewsList';
+
+const App: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gray-100 p-6">
+      <h1 className="text-4xl font-bold mb-6 text-center">Latest News</h1>
+      <NewsList />
+    </div>
+  );
+};
 
 export default App
