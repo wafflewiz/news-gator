@@ -53,11 +53,13 @@ import {
 //Using the NewsList in the App
 import React from 'react';
 import NewsList from './components/ui/NewsList';
+import CategoryFilter from './components/ui/CategoryFilter';
 
 const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-6">
       <h1 className="text-4xl font-bold mb-6 text-center">Latest News</h1>
+      < CategoryFilter />
       <NewsList />
     </div>
   );
