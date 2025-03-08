@@ -24,11 +24,15 @@ const App: React.FC = () => {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
         <div className="min-h-screen bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100">
+          <div className="flex items-center justify-end mb-4 p-4">
+            <ModeToggle />
+          </div>
+
           <h1 className="text-gray-900 dark:text-gray-100">Latest News</h1>
-            <div className="flex items-center justify-between mb-4 p-4">
+            <div className="flex items-center justify-center mb-4 p-4">
               <CategoryFilter currentCategory={category} setCategory={redirectToCategory}/>
-              <ModeToggle />
             </div>
+
           <NewsList categoryFilter={category} />
         </div>
       </ThemeProvider>
