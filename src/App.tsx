@@ -7,8 +7,7 @@ import { ThemeProvider} from "@/components/ui/theme-provider";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 
 const App: React.FC = () => {
-  const params: string[] = useParams();
-  let category = params.category;
+  var { category } = useParams<{ category: string }>();
 
   const redirectToCategory = (newCategory: string) => {
     console.log(newCategory);
