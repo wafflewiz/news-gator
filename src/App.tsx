@@ -1,17 +1,10 @@
-
-
-
-//I added this card component from https://ui.shadcn.com/docs/components/
-//Just an example, we could have multiple cards holding articles 
-
-
-//Using the NewsList in the App
 import React from 'react';
 import NewsList from './components/ui/NewsList';
 import CategoryFilter from './components/ui/CategoryFilter';
 import { useParams } from "react-router";
 import './App.css';
-import { Redirect } from 'react-router-dom'
+import { ThemeProvider} from "@/components/ui/theme-provider";
+import { ModeToggle } from "@/components/ui/mode-toggle";
 
 const App: React.FC = () => {
   const params: string[] = useParams();
@@ -29,11 +22,16 @@ const App: React.FC = () => {
   console.log(category);
   
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
-      <h1 className="text-4xl font-bold mb-6 text-center">Latest News</h1>
-      <CategoryFilter currentCategory={category} setCategory={redirectToCategory}/>
-      <NewsList categoryFilter={category} />
-    </div>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+        <div className="min-h-screen bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100">
+          <h1 className="text-gray-900 dark:text-gray-100">Latest News</h1>
+            <div className="flex items-center justify-between mb-4 p-4">
+              <CategoryFilter currentCategory={category} setCategory={redirectToCategory}/>
+              <ModeToggle />
+            </div>
+          <NewsList categoryFilter={category} />
+        </div>
+      </ThemeProvider>
   );
 };
 
