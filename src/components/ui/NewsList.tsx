@@ -10,7 +10,7 @@ interface NewsArticle {
   publishedAt: string;
 }
 
-const NewsList: React.FC = () => {
+const NewsList: React.FC = ({ categoryFilter }: { categoryFilter: string }) => {
   const [articles, setArticles] = useState<NewsArticle[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -18,7 +18,7 @@ const NewsList: React.FC = () => {
   useEffect(() => {
     const loadNews = async () => {
       setLoading(true);
-      const news = await fetchNews('general');
+      const news = await fetchNews(categoryFilter);
       setArticles(news);
       setLoading(false);
     };
@@ -28,6 +28,13 @@ const NewsList: React.FC = () => {
 
   if (loading) {
     return <div>Loading...</div>;
+  }
+  
+  console.log(articles);
+  if (articles.length === 0) {
+    return (
+      <h2 className="w-full text-2xl font-semibold">{"No news articles found in the category '" + categoryFilter.charAt(0).toUpperCase() + categoryFilter.slice(1).toLowerCase() + "'"}</h2>
+    );
   }
 
   return (
