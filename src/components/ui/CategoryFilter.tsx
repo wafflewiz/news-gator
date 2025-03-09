@@ -1,9 +1,7 @@
 const CategoryFilter = ({
-  currentCategory,
-  setCategory,
+  currentCategory
 }: {
   currentCategory: string;
-  setCategory: (category: string) => void;
 }) => {
   const categories = ["general", "sports", "technology", "business"];
 
@@ -13,7 +11,6 @@ const CategoryFilter = ({
         <a
           key={category}
           href={"/" + category}
-          onClick={() => setCategory(category)}
           className={
             "px-4 py-2 rounded-full capitalize transition-colors duration-300 " +
             (currentCategory === category

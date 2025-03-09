@@ -8,14 +8,9 @@ import { ModeToggle } from "@/components/ui/mode-toggle";
 
 const App: React.FC = () => {
   var { category } = useParams<{ category: string }>();
-
-  const redirectToCategory = (newCategory: string) => {
-  }
-  
   
   if (category === undefined)
     category = "general";
-  
   
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
@@ -26,7 +21,7 @@ const App: React.FC = () => {
 
           <h1 className="text-gray-900 dark:text-gray-100">Latest News</h1>
             <div className="flex items-center justify-center mb-4 p-4">
-              <CategoryFilter currentCategory={category} setCategory={redirectToCategory}/>
+              <CategoryFilter currentCategory={category}/>
             </div>
 
           <NewsList categoryFilter={category} />
