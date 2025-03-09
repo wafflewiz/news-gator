@@ -10,15 +10,12 @@ const App: React.FC = () => {
   var { category } = useParams<{ category: string }>();
 
   const redirectToCategory = (newCategory: string) => {
-    console.log(newCategory);
   }
   
-  console.log(category);
   
   if (category === undefined)
     category = "general";
   
-  console.log(category);
   
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
